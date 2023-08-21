@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+    background: var(--Soft-orange);
+    margin-top: 30px;
+}
+
+.container {
+    padding: 3rem 6rem 3rem 6rem;
+    border: 2px solid white;
+    width: 90%;
+    height: 780px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#logo {
+    max-width: 50px;
+    float: left;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    float: right;
+    background: var(--off-white);
+    gap: 1.5rem;
+
+}
+
+.list li a {
+    color: var(--dark-blue);
+    font-size: 18px;
+    font-family: 'hanken grotesk';
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list li:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+.top-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    row-gap: 15px;
+}
+
+.text h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: 'hanken grotesk';
+}
+
+.text p {
+    font-family: 'hanken grotesk';
+    margin-top: 15px;
+    text-align: left;
+    padding: 5px 20px 10px 20px;
+    justify-content: space-around;
+    font-size: small;
+    text-orientation: sideways;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--Dark-grayish-blue);
+}
+
+.text button {
+    background-color: var(--Soft-red);
+    width: 9.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+    font-family: 'hanken grotesk';
+    height: 2.5rem;
+    border: 1px solid var(--Soft-red);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text button:hover {
+    background: var(--Very-dark-blue);
+    border: 1px solid var(--Very-dark-blue);
+}
+
+
+.side-panel {
+    font-family: 'hanken grotesk';
+    color: white;
+    padding: 20px;
+    height: 25rem;
+    width: 65%;
+    margin-top: 0px;
+    top: 0px;
+    display: inline;
+    position: relative;
+    float: right;
+    background-color: black;
+}
+#menu{
+    display: none;
+}
+
+
+.side-panel h1 {
+    color: var(--Soft-orange);
+}
+
+.side-panel p {
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 10px;
+}
+
+.side-panel h3 {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.side-panel h3:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+
+
+.left-panel img {
+    width: 95%;
+    height: 25%;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+
+footer div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+footer h3:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+.two,
+.one,
+.three {
+    display: block;
+    font-family: 'hanken grotesk';
+}
+
+.one h1,
+.two h1,
+.three h1 {
+    color: var(--Dark-grayish-blue);
+}
+
+footer img {
+    height: 10rem;
+    margin: 7px;
+}
+#mobile{
+    display: none;
+}
+
+.one p,
+.two p,
+.three p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+}
+
+@media only screen and (max-width : 600px) {
+    .container {
+        overflow-y: auto;
+        padding: 1.5rem;
+    }
+
+    #logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .side-panel {
+        width: fit-content;
+    }
+
+    .top_stories {
+        display: inline-block;
+    }
+
+    footer {
+        display: inline-block;
+    }
+
+
+    .list {
+        display: none;
+    }
+    #logo,#menu{
+        display: inline-block;
+    }
+
+    #menu {
+        content: url("./assets/images/icon-menu.svg");
+        float: right;
+        height: 2rem;
+        width: 50px;
+        margin-right: 16px;
+        margin-top: 8px;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+ }
+ .text{
+    display: inline-block;
+ }
+ .left-panel #desktop{
+    display: none;
+ }
+ .left-panel #mobile{
+    display: block;
+    content: url("./assets/images/image-web-3-mobile.jpg");
+    height: 50%;
+    width: 100%;
+ }
+    
+}
